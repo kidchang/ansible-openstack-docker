@@ -1,5 +1,5 @@
 # this is a base image for all openstack containers
-From ubuntu
+From ubuntu:trusty
 
 # add ubuntu cloud keyring
 RUN apt-get -y update && apt-get install -y ubuntu-cloud-keyring
