@@ -8,4 +8,8 @@ RUN apt-get install python-mysqldb mysql-server
 RUN rm -rf /var/lib/mysql/*
 # add conf file
 ADD my.cnf /etc/mysql/my.cnf
-
+# add volumes to allow backup
+VOLUME ["/var/mysql", "/var/lib/mysql"]
+# expose port 3306
+EXPOSE 3306
+CMD ["/run.sh"]
