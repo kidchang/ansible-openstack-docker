@@ -28,17 +28,4 @@ else
     echo "successfully set mysql password"
 fi
 
-# create database: keystone
-mysql -h${SERVER} --port=${PORT} --u${ROOT_USER} -p${PASSWORD} -e "create database keystone"
-# create database: glance
-mysql -h${SERVER} --port=${PORT} --u${ROOT_USER} -p${PASSWORD} -e "create database glance"
-# create database: neutron
-mysql -h${SERVER} --port=${PORT} --u${ROOT_USER} -p${PASSWORD} -e "create database neutron"
-# create database: ovs_neutron
-mysql -h${SERVER} --port=${PORT} --u${ROOT_USER} -p${PASSWORD} -e "create database ovs_neutron"
-# create database: nova
-mysql -h${SERVER} --port=${PORT} --u${ROOT_USER} -p${PASSWORD} -e "create database nova"
-# create database: cinder
-mysql -h${SERVER} --port=${PORT} --u${ROOT_USER} -p${PASSWORD} -e "create database cinder"
-
 service mysql restart
